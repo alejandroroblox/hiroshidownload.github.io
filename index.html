@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -75,7 +76,7 @@
     }
 
     .create-post-btn {
-      margin-top: 20px;
+      margin: 20px;
       padding: 10px 20px;
       background-color: #7fa8ff;
       color: white;
@@ -118,14 +119,9 @@
   </main>
 
   <!-- Botón de crear entrada -->
-  <button class="create-post-btn" id="create-post">Crear entrada</button>
-
-  <script>
-    document.getElementById("create-post").addEventListener("click", function() {
-      // Redirige a la página para crear una nueva entrada
-      window.location.href = "crear_entrada.html";  // Asegúrate de tener esta página
-    });
-  </script>
+  <a href="crear_entrada.html">
+    <button class="create-post-btn">Crear entrada</button>
+  </a>
 
 </body>
 </html>
