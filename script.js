@@ -16,6 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
   if (postFromURL) {
     loadPost(postFromURL);
   }
+
+  // Función para manejar el clic en el botón de "Crear entrada"
+  const createPostButton = document.getElementById('create-post');
+  if (createPostButton) {
+    createPostButton.addEventListener('click', () => {
+      // Acción para el botón de crear entrada
+      window.location.href = "crear_entrada.html";  // Redirige a una página de creación de entradas
+    });
+  }
 });
 
 function loadPost(filename) {
