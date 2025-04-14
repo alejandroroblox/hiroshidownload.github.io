@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Entrada - 🎶 Hiroshi Official Blog</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4ff;
+      color: #222;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(90deg, #7fa8ff, #c9d7ff);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 30px;
+      margin: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    textarea {
+      height: 200px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #7fa8ff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #3b5bdb;
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ccc;
+      color: black;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .back-btn:hover {
+      background-color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Crear Nueva Entrada</h1>
+  </header>
+
+  <main>
+    <form id="create-post-form">
+      <div class="form-group">
+        <label for="post-title">Título de la Entrada</label>
+        <input type="text" id="post-title" name="title" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="post-content">Contenido</label>
+        <textarea id="post-content" name="content" required></textarea>
+      </div>
+      
+      <button type="submit">Guardar Entrada</button>
+    </form>
+
+    <a href="index.html" class="back-btn">Volver al Blog</a>
+  </main>
+
+  <script>
+    document.getElementById('create-post-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const title = document.getElementById('post-title').value;
+      const content = document.getElementById('post-content').value;
+
+      if (title && content) {
+        // Aquí puedes agregar la lógica para guardar la entrada
+        alert('Entrada guardada correctamente');
+        
+        // Por ahora, simula redirigir a la página principal o mostrar el mensaje
+        window.location.href = "index.html"; // Regresa al blog
+      } else {
+        alert('Por favor, completa todos los campos.');
+      }
+    });
+  </script>
+
+</body>
+</html>
