@@ -37,14 +37,3 @@ function loadPost(filename) {
       }
     });
 }
-
-function loadPost(filename) {
-  fetch('posts/' + filename)
-    .then(res => res.ok ? res.text() : null)
-    .then(md => {
-      if (md) {
-        const html = marked.parse(md);
-        document.getElementById('content').innerHTML = html;
-      }
-    });
-}
